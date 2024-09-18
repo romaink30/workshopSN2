@@ -34,7 +34,7 @@ body {
     flex-direction: column; /* Colonne pour les boutons */
     justify-content: center; /* Centre verticalement */
     align-items: center; /* Centre horizontalement */
-    margin-top: 20px; /* Espace entre le header et les boutons */
+    flex-grow: 1; /* Permet au conteneur de prendre l'espace restant */
 }
 
 button {
