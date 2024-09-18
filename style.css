@@ -204,4 +204,73 @@ footer{
     color: tomato;
 }
 
+/* Conteneur du personnage */
+.character-container {
+    position: fixed;
+    bottom: 0;
+    left: 20px; /* Distance à gauche de l'écran */
+    margin: 0;
+    display: inline-block;
+}
 
+/* Style de l'image du personnage */
+.character {
+    width: 150px; /* Taille de l'image du personnage */
+    height: auto;
+}
+
+/* Style de la bulle de texte */
+.speech-bubble {
+    position: absolute;
+    bottom: 200px; /* Ajustez pour qu'elle sorte de la bouche du personnage */
+    left: 180px; /* Ajustez selon la taille de l'image */
+    width: 130px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Triangle de la bulle pointant vers la bouche */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+    
+}
+
+
+/* Style du bouton "Prochain niveau" */
+#nextLevelButton {
+    display: block;
+    margin: 30px auto;
+    padding: 5px;
+    background-color: hsl(210, 33%, 18%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px;
+    color: #FEE715FF; 
+}
+
+#nextLevelButton:hover {
+    background-color: hsl(210, 33%, 22%);
+    font-size: 18px;
+    transition: .5s;
+}
+
+/* Footer (vide) */
+footer {
+    height: 20px;
+    background-color: #333;
+    width: 100%;
+}
