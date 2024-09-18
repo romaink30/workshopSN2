@@ -17,7 +17,7 @@ let handlequizz = (e) => {
     if (!allChecked) {
         mainPopUp.classList.replace("popUp", "popUp--active")
         backgroundPopUp.classList.replace("popUp__background", "popUp__background--active")
-        bodypopup.textContent = "Nie zaznaczyłeś wszystkich odpowiedzi! :(";
+        bodypopup.textContent = "Vous n'avez pas noté toutes les réponses ! :(";
         return
     }
 
@@ -39,12 +39,12 @@ let handlequizz = (e) => {
     if(isTrue && allChecked){
         mainPopUp.classList.replace("popUp", "popUp--active")
         backgroundPopUp.classList.replace("popUp__background", "popUp__background--active")
-        bodypopup.textContent = "Gratulację! Zdałeś quizz!";
+        bodypopup.textContent = "Félicitations ! Vous avez réussi le quiz ! Passe au prochain niveau";
     }
     else {
         mainPopUp.classList.replace("popUp", "popUp--active")
         backgroundPopUp.classList.replace("popUp__background", "popUp__background--active")
-        bodypopup.textContent = "Przegrałeś...Spróbuj ponownie!";
+        bodypopup.textContent = "Vous avez perdu... Réessayez !";
     }
 
 }
@@ -61,4 +61,24 @@ closepopup.addEventListener('click', () => {
 
 })
 
+
+const bubbleText = document.getElementById("bubbleText");
+const nextLevelButton = document.getElementById("nextLevelButton");
+
+// Exemple de texte à afficher dans la bulle
+const texts = ["Salut, je parle !", "Comment ça va ?", "Félicitations, niveau terminé !", "Bon courage pour le prochain niveau !"];
+
+// Index actuel pour suivre le texte
+let index = 0;
+
+// Fonction pour changer le texte lorsque l'utilisateur clique sur "Prochain niveau"
+nextLevelButton.addEventListener("click", () => {
+    index = (index + 1) % texts.length;
+    bubbleText.innerText = texts[index];
+
+    // Redirection après le dernier texte
+    if (index === texts.length - 1) {
+        window.location.href = "/accueil.html"; // Change l'URL ici
+    }
+});
 
