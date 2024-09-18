@@ -72,13 +72,7 @@ const texts = ["Salut, je parle !", "Comment ça va ?", "Félicitations, niveau 
 let index = 0;
 
 // Fonction pour changer le texte lorsque l'utilisateur clique sur "Prochain niveau"
-nextLevelButton.addEventListener("click", () => {
+nextLevelButton.addEventListener("click"), () => {
     index = (index + 1) % texts.length;
     bubbleText.innerText = texts[index];
-
-    // Redirection après le dernier texte
-    if (index === texts.length - 1) {
-        window.location.href = "/accueil.html"; // Change l'URL ici
-    }
-});
-
+}
