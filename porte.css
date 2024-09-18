@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Aligne le contenu en colonne */
+    justify-content: flex-start; /* Aligne le contenu vers le haut */
+    align-items: center; /* Centre horizontalement */
+    background-color: #282c34; /* Fond sombre */
+    color: white; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police */
+}
+
+.header {
+    display: flex; /* Utilise flexbox pour le header */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    width: 100%; /* Prend toute la largeur */
+    padding-top: 20px; /* Espace en haut */
+}
+
+.title {
+    font-size: 2.5em; /* Taille du titre */
+    margin-right: 20px; /* Espace entre le titre et l'image */
+}
+
+.acceuil-image {
+    width: 100px; /* Ajuste la largeur de l'image */
+    height: auto; /* Garde les proportions de l'image */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Colonne pour les boutons */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    flex-grow: 1; /* Permet au conteneur de prendre l'espace restant */
+}
+
+.bubble {
+    position: absolute;
+    bottom: 100%; /* Positionne la bulle au-dessus de l'image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px; /* Largeur de la bulle */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
