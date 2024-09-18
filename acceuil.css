@@ -11,15 +11,22 @@ body {
     font-family: Arial, sans-serif; /* Police */
 }
 
-header {
+.header {
+    display: flex; /* Utilise flexbox pour le header */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
     width: 100%; /* Prend toute la largeur */
-    text-align: center; /* Centre le texte */
     padding-top: 20px; /* Espace en haut */
 }
 
 .title {
     font-size: 2.5em; /* Taille du titre */
-    margin-bottom: 20px; /* Espace entre le titre et les boutons */
+    margin-right: 20px; /* Espace entre le titre et l'image */
+}
+
+.acceuil-image {
+    width: 100px; /* Ajuste la largeur de l'image */
+    height: auto; /* Garde les proportions de l'image */
 }
 
 .container {
@@ -79,11 +86,4 @@ button span {
     color: #03045e;
     font-size: 18px;
     transition: all 0.3s ease-in;
-}
-
-.acceuil-image {
-    position: fixed; /* Fixe l'image à la position */
-    width: 50%; /* Réduit la largeur à 50% de l'écran */
-    height: auto; /* Garde les proportions de l'image */
-    max-width: 200px; /* Optionnel : limite la largeur maximale */
 }
