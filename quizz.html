@@ -1,4 +1,4 @@
-<html lang="fr"></html>
+
 
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,12 @@
     <title>Quizz</title>
 </head>
 <img src="/images/test.png" alt="Image" class="bottom-image">
+<div class="character-container">
+    <!-- Bulle de texte -->
+    <div class="speech-bubble" id="speechBubble">
+        <p id="bubbleText">Salut, je parle !</p>
+    </div>
+</div>
 <body>
     <header class="header">
         <h1>Bienvenue dans le Quizz !</h1>
@@ -111,13 +117,13 @@
                     <div class="form__label"> <li> 
                         <label>
                             Un logiciel malveillant qui endommage ou vole des données<input class="js-answer" type="radio" name="question-5" id="answer-14"
-                                value="false">
+                                value="true">
                         </label>
                     </li> </div>
                     <div class="form__label"> <li> 
                         <label>
                             Un logiciel open-source <input class="js-answer" type="radio" name="question-5" id="answer-15"
-                                value="true">
+                                value="false">
                         </label>
                     </li> </div>
                 </ol>
@@ -130,13 +136,13 @@
                 <ol type="A">
                     <div class="form__label"> <li> 
                         <label>
-                            Collecter des données sur Internet<input class="js-answer" type="radio" name="question-6" id="answer-16"
-                                value="true">
+                            Simuler le fonctionnement du cerveau humain pour résoudre des problèmes complexes<input class="js-answer" type="radio" name="question-6" id="answer-17"
+                            value="true">
                         </label>
                     </li> </div>
                     <div class="form__label"> <li> 
                         <label>
-                            Simuler le fonctionnement du cerveau humain pour résoudre des problèmes complexes<input class="js-answer" type="radio" name="question-6" id="answer-17"
+                            Collecter des données sur Internet<input class="js-answer" type="radio" name="question-6" id="answer-16"
                                 value="false">
                         </label>
                     </li> </div>
@@ -149,7 +155,7 @@
                 </ol>
             </fieldset>
             <button class="form__button js-popUpOpen" type="submit">Vérifiez votre résultat !</button>
-            <button class="form__button" type="reset">Recommencer</button>
+            <button id="nextLevelButton" type="submit">Prochain niveau</button>
         </form>
         <div class="popUp js-popUp">
             <div class="popUp__head">
@@ -162,10 +168,9 @@
     </div>
     </main>
     <footer class="footer"> page réalisée dans le cadre du workshopSN2 <a class="footer__link"
-        target="_blank" title="Oficjalna strona Kursu YouCode." rel="noreferrer noopener"
+
         href=></a>
     </footer>
     <div class="popUp__background js-popUpBackground"></div>
 </body>
-
 </html>
