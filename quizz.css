@@ -53,6 +53,7 @@ html {
     width: 80%;
 }
 
+
 .popUp__head{
     padding: 10px 15px;
     display: flex;
@@ -66,6 +67,16 @@ html {
     left: 0%; /* Centre l'image horizontalement */
     width: 100%; /* S'assure que l'image prend toute la largeur */
     max-width: 300px;
+}
+
+.acceuil-image {
+    position: fixed; /* Fixe l'image à la position */
+    bottom: 0; /* Colle l'image en bas */
+    left: 50%; /* Centre l'image horizontalement */
+    transform: translateX(-50%); /* Ajuste le centrage */
+    width: 50%; /* Réduit la largeur à 50% de l'écran */
+    height: auto; /* Garde les proportions de l'image */
+    max-width: 300px; /* Optionnel : limite la largeur maximale */
 }
 
 .popUp__title{
@@ -192,4 +203,5 @@ footer{
 .js-incorrect.js-incorrect{
     color: tomato;
 }
+
 
