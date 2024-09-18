@@ -266,6 +266,8 @@ footer{
     background-color: hsl(210, 33%, 22%);
     font-size: 18px;
     transition: .5s;
+    color: #FEE715FF;
+    
 }
 
 /* Footer (vide) */
