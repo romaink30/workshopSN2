@@ -1,3 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Aligne le contenu en colonne */
+    justify-content: flex-start; /* Aligne le contenu vers le haut */
+    align-items: center; /* Centre horizontalement */
+    background-color: #282c34; /* Fond sombre */
+    color: white; /* Couleur du texte */
+    font-family: Arial, sans-serif; /* Police */
+}
+
+header {
+    width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centre le texte */
+    padding-top: 20px; /* Espace en haut */
+}
+
+.title {
+    font-size: 2.5em; /* Taille du titre */
+    margin-bottom: 20px; /* Espace entre le titre et les boutons */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Colonne pour les boutons */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    margin-top: 20px; /* Espace entre le header et les boutons */
+}
+
 button {
     display: inline-block;
     width: 150px;
@@ -8,10 +40,10 @@ button {
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 1;
-   }
-   
-   button::before,
-   button::after {
+}
+
+button::before,
+button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -21,57 +53,37 @@ button {
     transition: all 0.5s;
     overflow: hidden;
     z-index: -1;
-   }
-   
-   button::before {
+}
+
+button::before {
     left: -10px;
     background: #240046;
-   }
-   
-   button::after {
+}
+
+button::after {
     right: -10px;
     background: #5a189a;
-   }
-   
-   button:hover::before,
-   button:hover::after {
+}
+
+button:hover::before,
+button:hover::after {
     width: 58%;
-   }
-   
-   button:hover span {
+}
+
+button:hover span {
     color: #e0aaff;
     transition: 0.3s;
-   }
-   
-   button span {
+}
+
+button span {
     color: #03045e;
     font-size: 18px;
     transition: all 0.3s ease-in;
-   }
+}
 
-   .acceuil-image {
+.acceuil-image {
     position: fixed; /* Fixe l'image à la position */
-    bottom: 0; /* Colle l'image en bas */
-    left: 50%; /* Centre l'image horizontalement */
-    transform: translateX(-50%); /* Ajuste le centrage */
     width: 50%; /* Réduit la largeur à 50% de l'écran */
     height: auto; /* Garde les proportions de l'image */
     max-width: 200px; /* Optionnel : limite la largeur maximale */
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    background-color: #282c34; /* Fond sombre */
-    color: white; /* Couleur du texte */
-    font-family: Arial, sans-serif; /* Police */
-}
-
-.container {
-    text-align: center; /* Centre le contenu dans le conteneur */
-}
-
