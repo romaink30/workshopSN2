@@ -110,7 +110,7 @@ button:hover {
 .speech-bubble {
     position: absolute;
     bottom: 200px; /* Ajustez pour qu'elle sorte de la bouche du personnage */
-    left: 180px; /* Ajustez selon la taille de l'image */
+    left: 190px; /* Ajustez selon la taille de l'image */
     width: 130px;
     padding: 10px;
     background-color: white;
