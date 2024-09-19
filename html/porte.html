@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porte a deverrouillée</title>
+    <title>Porte déverrouillée</title>
     <link rel="stylesheet" href="/css/porte.css">
 </head>
-<img src="/images/test.png" alt="Image" class="bottom-image">
-<div class="character-container">
-    <!-- Bulle de texte -->
-    <div class="speech-bubble" id="speechBubble">
-        <p id="bubbleText">Salut, je parle !</p>
-    </div>
-</div>
 <body>
+    <!-- Le conteneur pour l'image du personnage et la bulle -->
+    <div class="character-container">
+        <img src="/images/test.png" alt="Image du personnage" class="bottom-image">
+        <!-- Bulle de texte -->
+        <div class="speech-bubble" id="speechBubble">
+            <p id="bubbleText">Salut, je parle !</p>
+        </div>
+    </div>
+
+    <!-- Mur avec la porte -->
     <div class="wall">
         <div class="door">
             <div class="door-handle"></div>
         </div>
     </div>
 
+    <!-- Modale pour le code -->
     <div id="codeEntry" class="modal">
         <div class="modal-content">
             <h2>Déverrouillez la porte</h2>
