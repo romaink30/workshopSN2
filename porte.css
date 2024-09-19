@@ -128,9 +128,9 @@ button:hover {
     
 }
 .bottom-image {
-    position: fixed; /* Fixe l'image à la position /
-    bottom: 0; / Colle l'image en bas /
-    left: 0%; / Centre l'image horizontalement /
-    width: 100%; / S'assure que l'image prend toute la largeur */
+    position: fixed;
+    bottom: 0; 
+    left: 0%; 
+    width: 100%; 
     max-width: 300px;
 }
