@@ -8,7 +8,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Style pour le mur noir */
+.bottom-image {
+    position: fixed; /* L'image est fixée à un endroit spécifique */
+    bottom: 0; /* Aligne l'image en bas de la page */
+    left: 0; /* Aligne l'image à gauche de la page */
+    width: 300px; /* Ajuste la taille selon ton besoin */
+    height: auto; /* Garde les proportions correctes */
+    z-index: 10; /* Assure que l'image est devant la .wall */
+}
+/*Style pour le mur noir*/
 .wall {
     background-color: black;
     width: 100%;
@@ -16,10 +24,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 1000px; 
     position: relative;
-    perspective: 1000px; /* Nécessaire pour l'effet 3D */
+    z-index: 1; /* La wall est derrière */
 }
-
 /* Style pour la porte */
 .door {
     width: 200px;
@@ -112,6 +120,7 @@ button:hover {
     text-align: center;
     font-size: 16px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
     
 }
 /*Triangle de la bulle pointant vers la bouche */
@@ -126,11 +135,4 @@ button:hover {
     border-right: 15px solid transparent;
     border-bottom: 20px solid white;
     
-}
-.bottom-image {
-    position: fixed; /* Fixe l'image à la position */
-    bottom: 0; /* Colle l'image en bas */
-    left: 0%; /* Centre l'image horizontalement */
-    width: 100%; /* S'assure que l'image prend toute la largeur */
-    max-width: 300px;
 }
