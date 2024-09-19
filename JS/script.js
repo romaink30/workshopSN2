@@ -39,7 +39,7 @@ let handlequizz = (e) => {
     if(isTrue && allChecked){
         mainPopUp.classList.replace("popUp", "popUp--active")
         backgroundPopUp.classList.replace("popUp__background", "popUp__background--active")
-        bodypopup.textContent = "Félicitations ! Vous avez réussi le quiz ! Passe au prochain niveau";
+        bodypopup.textContent = "Félicitations ! Vous avez réussi le quiz ! Le mot de passe pour déverouiller la porte est 'train'";
     }
     else {
         mainPopUp.classList.replace("popUp", "popUp--active")
