@@ -1,0 +1,30 @@
+/* Style pour le fond d'écran */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'bree', serif;
+}
+
+body {
+    background: url('/images/fin.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Positionner le texte en haut à droite */
+.recommence {
+    position: absolute;
+    top: 65px; /* Distance du haut de la page */
+    right: 400px; /* Distance du côté droit de la page */
+}
+
+/* Style pour le lien */
+a {
+    color: #486a86; /* Hérite de la couleur du texte environnant */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    font-size: 32px; /* Augmente la taille du texte */
+    font-family: 'Bree Serif', serif; /* Applique la police Bree Serif au lien */
+}
