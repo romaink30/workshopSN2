@@ -1,52 +1,136 @@
+/* Style pour la page entière */
 body {
     margin: 0;
-    padding: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Aligne le contenu en colonne */
-    justify-content: flex-start; /* Aligne le contenu vers le haut */
-    align-items: center; /* Centre horizontalement */
-    background-color: #282c34; /* Fond sombre */
-    color: white; /* Couleur du texte */
-    font-family: Arial, sans-serif; /* Police */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
 }
 
-.header {
-    display: flex; /* Utilise flexbox pour le header */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    width: 100%; /* Prend toute la largeur */
-    padding-top: 20px; /* Espace en haut */
-}
-
-.title {
-    font-size: 2.5em; /* Taille du titre */
-    margin-right: 20px; /* Espace entre le titre et l'image */
-}
-
-.acceuil-image {
-    width: 100px; /* Ajuste la largeur de l'image */
-    height: auto; /* Garde les proportions de l'image */
-}
-
-.container {
+/* Style pour le mur noir */
+.wall {
+    background-color: black;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Colonne pour les boutons */
-    justify-content: center; /* Centre verticalement */
-    align-items: center; /* Centre horizontalement */
-    flex-grow: 1; /* Permet au conteneur de prendre l'espace restant */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px; /* Nécessaire pour l'effet 3D */
 }
 
-.bubble {
+/* Style pour la porte */
+.door {
+    width: 200px;
+    height: 400px;
+    background-color: #4b3832;
+    border: 5px solid #2e2e2e;
+    position: relative;
+    transform-origin: left; /* La porte tourne autour du bord gauche */
+    transition: transform 1s ease-in-out;
+    z-index: 2; /* La porte est au-dessus du fond */
+}
+
+/* Poignée de porte */
+.door-handle {
+    width: 40px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
     position: absolute;
-    bottom: 100%; /* Positionne la bulle au-dessus de l'image */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* État de la porte ouverte */
+.door.open {
+    transform: rotateY(-90deg); /* La porte pivote à 90 degrés autour de l'axe Y */
+}
+
+/* Le fond derrière la porte */
+.background {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(to bottom, #87CEEB, #228B22); /* Exemple : ciel et herbe */
+    z-index: 1; /* Derrière la porte */
+    top: 0;
+}
+
+/* Boîte modale pour entrer le code */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px; /* Largeur de la bulle */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.modal-content {
     text-align: center;
+}
+
+input {
+    width: 100px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#message {
+    color: red;
+    margin-top: 10px;
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 200px; /* Ajustez pour qu'elle sorte de la bouche du personnage */
+    left: 180px; /* Ajustez selon la taille de l'image */
+    width: 130px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+/*Triangle de la bulle pointant vers la bouche */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+    
+}
+.bottom-image {
+    position: fixed; /* Fixe l'image à la position /
+    bottom: 0; / Colle l'image en bas /
+    left: 0%; / Centre l'image horizontalement /
+    width: 100%; / S'assure que l'image prend toute la largeur */
+    max-width: 300px;
 }
