@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire Interactive</title>
+    <link href="/css/histoire.css" rel="stylesheet">
+</head>
+<body>
+    <div class="character-container">
+        <img src="/images/test.png" alt="Personnage" class="character">
+        <div class="speech-bubble" id="speechBubble">Bonjour !</div>
+    </div>
+
+    <div class="controls">
+        <button id="prevButton" onclick="prevStep()">Précédent</button>
+        <button id="nextButton" onclick="nextStep()">Continuez</button>
+        <button id="quizButton" style="display: none;" onclick="goToQuiz()">Accédez au quiz</button>
+    </div>
+
+    <script src="/JS/histoire1.js"></script>
+</body>
+</html>
