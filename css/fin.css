@@ -17,13 +17,13 @@ body {
 /* Positionner le texte en haut à droite */
 .recommence {
     position: absolute;
-    top: 65px; /* Distance du haut de la page */
-    right: 400px; /* Distance du côté droit de la page */
+    top: 400px; /* Distance du haut de la page */
+    right: 675px; /* Distance du côté droit de la page */
 }
 
 /* Style pour le lien */
 a {
-    color: #486a86; /* Hérite de la couleur du texte environnant */
+    color: black; /* Hérite de la couleur du texte environnant */
     text-decoration: none; /* Supprime le soulignement par défaut des liens */
     font-size: 32px; /* Augmente la taille du texte */
     font-family: 'Bree Serif', serif; /* Applique la police Bree Serif au lien */
