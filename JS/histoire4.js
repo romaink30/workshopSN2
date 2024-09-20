@@ -1,9 +1,9 @@
 // Déclaration des étapes de l'histoire
 let storySteps = [
-    "Alors je suppose que si vous êtes là c’est que vous avez passer le premier niveau",
-    " bien jouer jeune soldat",
-    "moi je viens a peine d’arriver en gare je pars à pied direction l’EPSI",
-    "pendant ce temps-là attaque toi au deuxième niveau je compte sur toi !"
+    " Bon première matinée finie on avance sur notre projet Workshop",
+    "là on va se régaler, sinon toi le quizz ",
+    "c’est bien passer, bien jouer tu commences à être chaud ",
+    "te refroidis pas le troisième niveau t’attend ne me lâches pas maintenant ! "
 ];
 
 let currentStep = 0;
@@ -43,7 +43,7 @@ function updateStory() {
 
 // Fonction pour accéder au quiz
 function goToQuiz() {
-    window.location.href = "quizz2.html"; // Redirige vers la page du quiz
+    window.location.href = "quizz3.html"; // Redirige vers la page du quiz
 }
 
 // Initialisation du texte

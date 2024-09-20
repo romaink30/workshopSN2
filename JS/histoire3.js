@@ -43,7 +43,7 @@ function updateStory() {
 
 // Fonction pour accéder au quiz
 function goToQuiz() {
-    window.location.href = "quiz.html"; // Redirige vers la page du quiz
+    window.location.href = "quizz4.html"; // Redirige vers la page du quiz
 }
 
 // Initialisation du texte

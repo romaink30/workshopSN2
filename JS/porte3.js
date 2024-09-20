@@ -17,7 +17,7 @@ document.getElementById('unlockBtn').addEventListener('click', function() {
 
         // Redirection vers une autre page après une petite attente pour que l'animation soit visible
         setTimeout(function() {
-            window.location.replace('/html/quizz4.html');  // Remplacer par le chemin correct
+            window.location.replace('/html/histoire3.html');  // Remplacer par le chemin correct
         }, 1000);  // Attendre 1 seconde avant la redirection
         
     } else {
